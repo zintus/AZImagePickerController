@@ -10,11 +10,16 @@
 		C013177115C704EF004BA2ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C013177015C704EF004BA2ED /* UIKit.framework */; };
 		C013177315C704EF004BA2ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C013177215C704EF004BA2ED /* Foundation.framework */; };
 		C013177515C704EF004BA2ED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C013177415C704EF004BA2ED /* CoreGraphics.framework */; };
-		C013177B15C704EF004BA2ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C013177915C704EF004BA2ED /* InfoPlist.strings */; };
-		C013177D15C704EF004BA2ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C013177C15C704EF004BA2ED /* main.m */; };
-		C013178115C704EF004BA2ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C013178015C704EF004BA2ED /* AppDelegate.m */; };
-		C013178415C704EF004BA2ED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C013178315C704EF004BA2ED /* ViewController.m */; };
-		C013178715C704EF004BA2ED /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C013178515C704EF004BA2ED /* ViewController.xib */; };
+		C013179915C7051E004BA2ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C013178F15C7051E004BA2ED /* AppDelegate.m */; };
+		C013179B15C7051E004BA2ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C013179215C7051E004BA2ED /* InfoPlist.strings */; };
+		C013179C15C7051E004BA2ED /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C013179415C7051E004BA2ED /* ViewController.xib */; };
+		C013179D15C7051E004BA2ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C013179615C7051E004BA2ED /* main.m */; };
+		C013179E15C7051E004BA2ED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C013179815C7051E004BA2ED /* ViewController.m */; };
+		C01317A315C7062A004BA2ED /* AZImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = C01317A115C7062A004BA2ED /* AZImagePickerController.m */; };
+		C01317A415C7062A004BA2ED /* AZImagePickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C01317A215C7062A004BA2ED /* AZImagePickerController.xib */; };
+		C0EF293515C70ABB00697662 /* AZImageCropController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0EF293315C70ABB00697662 /* AZImageCropController.m */; };
+		C0EF293615C70ABB00697662 /* AZImageCropController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0EF293415C70ABB00697662 /* AZImageCropController.xib */; };
+		C0EF293A15C71D8000697662 /* MaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0EF293915C71D8000697662 /* MaskView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +27,23 @@
 		C013177015C704EF004BA2ED /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C013177215C704EF004BA2ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C013177415C704EF004BA2ED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		C013177815C704EF004BA2ED /* AZImagePickerViewController-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AZImagePickerViewController-Info.plist"; sourceTree = "<group>"; };
-		C013177A15C704EF004BA2ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C013177C15C704EF004BA2ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C013177E15C704EF004BA2ED /* AZImagePickerViewController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AZImagePickerViewController-Prefix.pch"; sourceTree = "<group>"; };
-		C013177F15C704EF004BA2ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		C013178015C704EF004BA2ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C013178215C704EF004BA2ED /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C013178315C704EF004BA2ED /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		C013178615C704EF004BA2ED /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		C013178E15C7051E004BA2ED /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C013178F15C7051E004BA2ED /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C013179115C7051E004BA2ED /* AZImagePickerViewController-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AZImagePickerViewController-Prefix.pch"; sourceTree = "<group>"; };
+		C013179315C7051E004BA2ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C013179515C7051E004BA2ED /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		C013179615C7051E004BA2ED /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C013179715C7051E004BA2ED /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C013179815C7051E004BA2ED /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C01317A015C7062A004BA2ED /* AZImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AZImagePickerController.h; sourceTree = "<group>"; };
+		C01317A115C7062A004BA2ED /* AZImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AZImagePickerController.m; sourceTree = "<group>"; };
+		C01317A215C7062A004BA2ED /* AZImagePickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AZImagePickerController.xib; sourceTree = "<group>"; };
+		C01317A515C708A9004BA2ED /* AZImagePickerViewController-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AZImagePickerViewController-Info.plist"; sourceTree = "<group>"; };
+		C0EF293215C70ABB00697662 /* AZImageCropController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AZImageCropController.h; sourceTree = "<group>"; };
+		C0EF293315C70ABB00697662 /* AZImageCropController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AZImageCropController.m; sourceTree = "<group>"; };
+		C0EF293415C70ABB00697662 /* AZImageCropController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AZImageCropController.xib; sourceTree = "<group>"; };
+		C0EF293815C71D8000697662 /* MaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskView.h; sourceTree = "<group>"; };
+		C0EF293915C71D8000697662 /* MaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaskView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +63,8 @@
 		C013176115C704EF004BA2ED = {
 			isa = PBXGroup;
 			children = (
-				C013177615C704EF004BA2ED /* AZImagePickerViewController */,
+				C013179F15C7052E004BA2ED /* AZImagePickerController */,
+				C013178D15C7051E004BA2ED /* Classes */,
 				C013176F15C704EF004BA2ED /* Frameworks */,
 				C013176D15C704EF004BA2ED /* Products */,
 			);
@@ -74,28 +88,36 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C013177615C704EF004BA2ED /* AZImagePickerViewController */ = {
+		C013178D15C7051E004BA2ED /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C013177F15C704EF004BA2ED /* AppDelegate.h */,
-				C013178015C704EF004BA2ED /* AppDelegate.m */,
-				C013178215C704EF004BA2ED /* ViewController.h */,
-				C013178315C704EF004BA2ED /* ViewController.m */,
-				C013178515C704EF004BA2ED /* ViewController.xib */,
-				C013177715C704EF004BA2ED /* Supporting Files */,
+				C013178E15C7051E004BA2ED /* AppDelegate.h */,
+				C013178F15C7051E004BA2ED /* AppDelegate.m */,
+				C01317A515C708A9004BA2ED /* AZImagePickerViewController-Info.plist */,
+				C013179115C7051E004BA2ED /* AZImagePickerViewController-Prefix.pch */,
+				C013179215C7051E004BA2ED /* InfoPlist.strings */,
+				C013179415C7051E004BA2ED /* ViewController.xib */,
+				C013179615C7051E004BA2ED /* main.m */,
+				C013179715C7051E004BA2ED /* ViewController.h */,
+				C013179815C7051E004BA2ED /* ViewController.m */,
 			);
-			path = AZImagePickerViewController;
+			path = Classes;
 			sourceTree = "<group>";
 		};
-		C013177715C704EF004BA2ED /* Supporting Files */ = {
+		C013179F15C7052E004BA2ED /* AZImagePickerController */ = {
 			isa = PBXGroup;
 			children = (
-				C013177815C704EF004BA2ED /* AZImagePickerViewController-Info.plist */,
-				C013177915C704EF004BA2ED /* InfoPlist.strings */,
-				C013177C15C704EF004BA2ED /* main.m */,
-				C013177E15C704EF004BA2ED /* AZImagePickerViewController-Prefix.pch */,
+				C01317A015C7062A004BA2ED /* AZImagePickerController.h */,
+				C01317A115C7062A004BA2ED /* AZImagePickerController.m */,
+				C01317A215C7062A004BA2ED /* AZImagePickerController.xib */,
+				C0EF293215C70ABB00697662 /* AZImageCropController.h */,
+				C0EF293315C70ABB00697662 /* AZImageCropController.m */,
+				C0EF293415C70ABB00697662 /* AZImageCropController.xib */,
+				C0EF293815C71D8000697662 /* MaskView.h */,
+				C0EF293915C71D8000697662 /* MaskView.m */,
 			);
-			name = "Supporting Files";
+			name = AZImagePickerController;
+			path = AZImagePickerViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,8 +171,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C013177B15C704EF004BA2ED /* InfoPlist.strings in Resources */,
-				C013178715C704EF004BA2ED /* ViewController.xib in Resources */,
+				C013179B15C7051E004BA2ED /* InfoPlist.strings in Resources */,
+				C013179C15C7051E004BA2ED /* ViewController.xib in Resources */,
+				C01317A415C7062A004BA2ED /* AZImagePickerController.xib in Resources */,
+				C0EF293615C70ABB00697662 /* AZImageCropController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,27 +185,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C013177D15C704EF004BA2ED /* main.m in Sources */,
-				C013178115C704EF004BA2ED /* AppDelegate.m in Sources */,
-				C013178415C704EF004BA2ED /* ViewController.m in Sources */,
+				C013179915C7051E004BA2ED /* AppDelegate.m in Sources */,
+				C013179D15C7051E004BA2ED /* main.m in Sources */,
+				C013179E15C7051E004BA2ED /* ViewController.m in Sources */,
+				C01317A315C7062A004BA2ED /* AZImagePickerController.m in Sources */,
+				C0EF293515C70ABB00697662 /* AZImageCropController.m in Sources */,
+				C0EF293A15C71D8000697662 /* MaskView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C013177915C704EF004BA2ED /* InfoPlist.strings */ = {
+		C013179215C7051E004BA2ED /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C013177A15C704EF004BA2ED /* en */,
+				C013179315C7051E004BA2ED /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		C013178515C704EF004BA2ED /* ViewController.xib */ = {
+		C013179415C7051E004BA2ED /* ViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C013178615C704EF004BA2ED /* en */,
+				C013179515C7051E004BA2ED /* en */,
 			);
 			name = ViewController.xib;
 			sourceTree = "<group>";
@@ -240,8 +267,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AZImagePickerViewController/AZImagePickerViewController-Prefix.pch";
-				INFOPLIST_FILE = "AZImagePickerViewController/AZImagePickerViewController-Info.plist";
+				GCC_PREFIX_HEADER = "Classes/AZImagePickerViewController-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Classes/AZImagePickerViewController-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -251,8 +278,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AZImagePickerViewController/AZImagePickerViewController-Prefix.pch";
-				INFOPLIST_FILE = "AZImagePickerViewController/AZImagePickerViewController-Info.plist";
+				GCC_PREFIX_HEADER = "Classes/AZImagePickerViewController-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Classes/AZImagePickerViewController-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -277,6 +304,7 @@
 				C013178C15C704EF004BA2ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

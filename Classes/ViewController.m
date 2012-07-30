@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "AZImagePickerController.h"
 
 @interface ViewController ()
 
@@ -29,6 +30,12 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
 	return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
+
+- (IBAction)grabImage:(id)sender
+{
+	AZImagePickerController* ctrl = [[[AZImagePickerController alloc] init] autorelease];
+	[self presentModalViewController:ctrl animated:YES];
 }
 
 @end
