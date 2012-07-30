@@ -1,0 +1,284 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C013177115C704EF004BA2ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C013177015C704EF004BA2ED /* UIKit.framework */; };
+		C013177315C704EF004BA2ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C013177215C704EF004BA2ED /* Foundation.framework */; };
+		C013177515C704EF004BA2ED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C013177415C704EF004BA2ED /* CoreGraphics.framework */; };
+		C013177B15C704EF004BA2ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C013177915C704EF004BA2ED /* InfoPlist.strings */; };
+		C013177D15C704EF004BA2ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C013177C15C704EF004BA2ED /* main.m */; };
+		C013178115C704EF004BA2ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C013178015C704EF004BA2ED /* AppDelegate.m */; };
+		C013178415C704EF004BA2ED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C013178315C704EF004BA2ED /* ViewController.m */; };
+		C013178715C704EF004BA2ED /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C013178515C704EF004BA2ED /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C013176C15C704EF004BA2ED /* AZImagePickerViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AZImagePickerViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C013177015C704EF004BA2ED /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C013177215C704EF004BA2ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C013177415C704EF004BA2ED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C013177815C704EF004BA2ED /* AZImagePickerViewController-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AZImagePickerViewController-Info.plist"; sourceTree = "<group>"; };
+		C013177A15C704EF004BA2ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C013177C15C704EF004BA2ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C013177E15C704EF004BA2ED /* AZImagePickerViewController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AZImagePickerViewController-Prefix.pch"; sourceTree = "<group>"; };
+		C013177F15C704EF004BA2ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C013178015C704EF004BA2ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C013178215C704EF004BA2ED /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C013178315C704EF004BA2ED /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C013178615C704EF004BA2ED /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C013176915C704EF004BA2ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C013177115C704EF004BA2ED /* UIKit.framework in Frameworks */,
+				C013177315C704EF004BA2ED /* Foundation.framework in Frameworks */,
+				C013177515C704EF004BA2ED /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C013176115C704EF004BA2ED = {
+			isa = PBXGroup;
+			children = (
+				C013177615C704EF004BA2ED /* AZImagePickerViewController */,
+				C013176F15C704EF004BA2ED /* Frameworks */,
+				C013176D15C704EF004BA2ED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C013176D15C704EF004BA2ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C013176C15C704EF004BA2ED /* AZImagePickerViewController.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C013176F15C704EF004BA2ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C013177015C704EF004BA2ED /* UIKit.framework */,
+				C013177215C704EF004BA2ED /* Foundation.framework */,
+				C013177415C704EF004BA2ED /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C013177615C704EF004BA2ED /* AZImagePickerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C013177F15C704EF004BA2ED /* AppDelegate.h */,
+				C013178015C704EF004BA2ED /* AppDelegate.m */,
+				C013178215C704EF004BA2ED /* ViewController.h */,
+				C013178315C704EF004BA2ED /* ViewController.m */,
+				C013178515C704EF004BA2ED /* ViewController.xib */,
+				C013177715C704EF004BA2ED /* Supporting Files */,
+			);
+			path = AZImagePickerViewController;
+			sourceTree = "<group>";
+		};
+		C013177715C704EF004BA2ED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C013177815C704EF004BA2ED /* AZImagePickerViewController-Info.plist */,
+				C013177915C704EF004BA2ED /* InfoPlist.strings */,
+				C013177C15C704EF004BA2ED /* main.m */,
+				C013177E15C704EF004BA2ED /* AZImagePickerViewController-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C013176B15C704EF004BA2ED /* AZImagePickerViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C013178A15C704EF004BA2ED /* Build configuration list for PBXNativeTarget "AZImagePickerViewController" */;
+			buildPhases = (
+				C013176815C704EF004BA2ED /* Sources */,
+				C013176915C704EF004BA2ED /* Frameworks */,
+				C013176A15C704EF004BA2ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AZImagePickerViewController;
+			productName = AZImagePickerViewController;
+			productReference = C013176C15C704EF004BA2ED /* AZImagePickerViewController.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C013176315C704EF004BA2ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Alex Zinchenko";
+			};
+			buildConfigurationList = C013176615C704EF004BA2ED /* Build configuration list for PBXProject "AZImagePickerViewController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C013176115C704EF004BA2ED;
+			productRefGroup = C013176D15C704EF004BA2ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C013176B15C704EF004BA2ED /* AZImagePickerViewController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C013176A15C704EF004BA2ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C013177B15C704EF004BA2ED /* InfoPlist.strings in Resources */,
+				C013178715C704EF004BA2ED /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C013176815C704EF004BA2ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C013177D15C704EF004BA2ED /* main.m in Sources */,
+				C013178115C704EF004BA2ED /* AppDelegate.m in Sources */,
+				C013178415C704EF004BA2ED /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C013177915C704EF004BA2ED /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C013177A15C704EF004BA2ED /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C013178515C704EF004BA2ED /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C013178615C704EF004BA2ED /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C013178815C704EF004BA2ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C013178915C704EF004BA2ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C013178B15C704EF004BA2ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AZImagePickerViewController/AZImagePickerViewController-Prefix.pch";
+				INFOPLIST_FILE = "AZImagePickerViewController/AZImagePickerViewController-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C013178C15C704EF004BA2ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AZImagePickerViewController/AZImagePickerViewController-Prefix.pch";
+				INFOPLIST_FILE = "AZImagePickerViewController/AZImagePickerViewController-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C013176615C704EF004BA2ED /* Build configuration list for PBXProject "AZImagePickerViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C013178815C704EF004BA2ED /* Debug */,
+				C013178915C704EF004BA2ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C013178A15C704EF004BA2ED /* Build configuration list for PBXNativeTarget "AZImagePickerViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C013178B15C704EF004BA2ED /* Debug */,
+				C013178C15C704EF004BA2ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C013176315C704EF004BA2ED /* Project object */;
+}
