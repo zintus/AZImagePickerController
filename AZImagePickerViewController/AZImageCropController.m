@@ -16,6 +16,8 @@
 @property (nonatomic, retain) UIImage* originalImage;
 @property (nonatomic, retain) UIImageView* imageView;
 
+@property (nonatomic, retain) IBOutlet UIImageView* testImageView;
+
 @end
 
 @implementation AZImageCropController
@@ -89,6 +91,12 @@
 	return self.imageView;
 }
 
+- (void) scrollViewDidScroll:(UIScrollView *)scrollView
+{
+	NSLog(@"%@", NSStringFromCGPoint(self.scroller.contentOffset));
+	NSLog(@"%@", NSStringFromCGRect(self.imageView.frame));
+}
+
 #pragma mark Actions
 
 - (IBAction)actRetake:(id)sender
@@ -101,19 +109,41 @@
 	float dx = self.scroller.bounds.size.width * maskedWidthFraction;
 	float dy = self.scroller.bounds.size.height * maskedHeightFraction;
 	
+	float windowY = self.scroller.bounds.size.height - dy;
+	
 	CGSize size = CGSizeMake(self.scroller.bounds.size.width - dx, self.scroller.bounds.size.height - dy);
 	
 	UIGraphicsBeginImageContext(size);
 	CGContextRef ctx = UIGraphicsGetCurrentContext();
 	
-	CGContextTranslateCTM(ctx, dx / 2, dy / 2);
-	CGContextScaleCTM(ctx, -1, -1);
-	CGContextDrawImage(ctx, self.imageView.bounds, self.originalImage.CGImage);
+	CGContextTranslateCTM(ctx, 0, size.height);
+	CGContextScaleCTM(ctx, 1, -1);
+	CGAffineTransform scrollerScale = CGAffineTransformScale(CGAffineTransformIdentity, self.scroller.zoomScale, self.scroller.zoomScale);
+	
+	CGAffineTransform inverseScrollerTransform = CGAffineTransformInvert(scrollerScale);
+	CGRect inversedImageSize = CGRectApplyAffineTransform(self.imageView.frame, inverseScrollerTransform);
+	CGPoint screenOffset = self.scroller.contentOffset;
+	
+	//originate to mask upper left corner
+	screenOffset.x += dx / 2.;
+	screenOffset.y += dy / 2.;
+	
+	//change offset to lower left corner
+	screenOffset.y += windowY;
+	screenOffset.y -= self.imageView.frame.size.height;
+	
+    CGPoint bufferOffset = screenOffset;
+	CGContextTranslateCTM(ctx, -bufferOffset.x, bufferOffset.y);
+
+	CGContextDrawImage(ctx,
+					   self.imageView.frame,
+					   self.originalImage.CGImage);
+	
 	
 	UIImage* img = UIGraphicsGetImageFromCurrentImageContext();
 	UIGraphicsEndImageContext();
 	
-	self.imageView.image = img;
+	self.testImageView.image = img;
 }
 
 @end
