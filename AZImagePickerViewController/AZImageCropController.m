@@ -16,11 +16,11 @@
 @property (nonatomic, retain) UIImage* originalImage;
 @property (nonatomic, retain) UIImageView* imageView;
 
-@property (nonatomic, retain) IBOutlet UIImageView* testImageView;
-
 @end
 
 @implementation AZImageCropController
+
+#pragma mark Init/Dealloc
 
 - (id) initWithImage:(UIImage*) image
 {
@@ -32,6 +32,19 @@
 
 	
 	return self;
+}
+
+- (void) releaseOutlets
+{
+	self.originalImage = nil;
+	self.imageView = nil;
+	self.scroller = nil;
+}
+
+- (void) dealloc
+{
+	[self releaseOutlets];
+	[super dealloc];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -80,8 +93,7 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+	[self releaseOutlets];
 }
 
 #pragma mark UIScrollView delegate
@@ -118,10 +130,6 @@
 	
 	CGContextTranslateCTM(ctx, 0, size.height);
 	CGContextScaleCTM(ctx, 1, -1);
-	CGAffineTransform scrollerScale = CGAffineTransformScale(CGAffineTransformIdentity, self.scroller.zoomScale, self.scroller.zoomScale);
-	
-	CGAffineTransform inverseScrollerTransform = CGAffineTransformInvert(scrollerScale);
-	CGRect inversedImageSize = CGRectApplyAffineTransform(self.imageView.frame, inverseScrollerTransform);
 	CGPoint screenOffset = self.scroller.contentOffset;
 	
 	//originate to mask upper left corner
@@ -143,7 +151,10 @@
 	UIImage* img = UIGraphicsGetImageFromCurrentImageContext();
 	UIGraphicsEndImageContext();
 	
-	self.testImageView.image = img;
+	if (self.delegate)
+	{
+		[self.delegate imageCropController:self didFinisedCroppingResultingInImage:img];
+	}
 }
 
 @end

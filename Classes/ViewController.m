@@ -9,8 +9,9 @@
 #import "ViewController.h"
 #import "AZImagePickerController.h"
 
-@interface ViewController ()
+@interface ViewController () <AZImagePickerControllerDelegate>
 
+@property (nonatomic, retain) IBOutlet UIImageView* imageView;
 @end
 
 @implementation ViewController
@@ -24,7 +25,13 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
+	self.imageView = nil;
+}
+
+- (void) dealloc
+{
+	self.imageView = nil;
+	[super dealloc];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -35,7 +42,17 @@
 - (IBAction)grabImage:(id)sender
 {
 	AZImagePickerController* ctrl = [[[AZImagePickerController alloc] init] autorelease];
+	ctrl.pickerDelegate = self;
 	[self presentModalViewController:ctrl animated:YES];
+}
+
+#pragma mark AZImagePickerControllerDelegate
+
+- (void)imagePickerController:(AZImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+	self.imageView.image = [info objectForKey:AZImagePickerControllerResultingImage];
+	
+	[self dismissModalViewControllerAnimated:YES];
 }
 
 @end

@@ -9,15 +9,18 @@
 #import "AZImagePickerController.h"
 #import "AZImageCropController.h"
 
-@interface AZImagePickerController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+NSString* const AZImagePickerControllerResultingImage = @"AZImagePickerControllerResultingImage";
+
+@interface AZImagePickerController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, AZImageCropControllerDelegate>
 
 @property (nonatomic, retain, readwrite) UIImagePickerController* imagePicker;
- 
+@property (nonatomic, retain) NSMutableDictionary* pickingInfo;
 
 @end
 
 @implementation AZImagePickerController
 
+#pragma mark init/dealloc
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -33,6 +36,26 @@
     return self;
 }
 
+- (void) releaseOutlets
+{
+	self.imagePicker = nil;
+}
+
+- (void) dealloc
+{
+	self.pickingInfo = nil;
+	[self releaseOutlets];
+	[super dealloc];
+}
+
+#pragma mark Lifecycle
+
+- (void) viewDidUnload
+{
+	[super viewDidUnload];
+	[self releaseOutlets];
+}
+
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
@@ -44,10 +67,21 @@
 
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
+	self.pickingInfo = [NSMutableDictionary dictionaryWithDictionary:info];
 	UIImage* pickedImage = [info objectForKey:UIImagePickerControllerOriginalImage];
 	
 	AZImageCropController* cropper = [[[AZImageCropController alloc] initWithImage:pickedImage] autorelease];
+	cropper.delegate = self;
 	[self pushViewController:cropper animated:YES];
+}
+
+#pragma mark ImageCropperControllerDelegate
+
+- (void) imageCropController:(AZImageCropController *)cropper didFinisedCroppingResultingInImage:(UIImage *)image
+{
+	[self.pickingInfo setObject:image forKey:AZImagePickerControllerResultingImage];
+	if (self.pickerDelegate)
+		[self.pickerDelegate imagePickerController:self didFinishPickingMediaWithInfo:self.pickingInfo];
 }
 
 @end

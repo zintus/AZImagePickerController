@@ -8,8 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@class AZImageCropController;
+
+@protocol AZImageCropControllerDelegate <NSObject>
+
+@required
+- (void) imageCropController:(AZImageCropController *)cropper didFinisedCroppingResultingInImage:(UIImage *)image;
+
+@end
+
 @interface AZImageCropController : UIViewController
 
 - (id) initWithImage:(UIImage*) image;
+
+@property (nonatomic, assign) id<AZImageCropControllerDelegate> delegate;
 
 @end

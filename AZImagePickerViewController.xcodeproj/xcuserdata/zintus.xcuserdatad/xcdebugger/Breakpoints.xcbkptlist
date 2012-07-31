@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/ViewController.m"
-         timestampString = "365365235.823282"
+         timestampString = "365441724.190568"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "22"
-         endingLineNumber = "22"
+         startingLineNumber = "23"
+         endingLineNumber = "23"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -34,33 +34,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AZImagePickerViewController/AZImageCropController.m"
-         timestampString = "365431244.174049"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "49"
-         endingLineNumber = "49"
-         landmarkName = "-viewDidLoad"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "AZImagePickerViewController/AZImageCropController.m"
-         timestampString = "365431244.174049"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "89"
-         endingLineNumber = "89"
-         landmarkName = "-viewForZoomingInScrollView:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "AZImagePickerViewController/AZImageCropController.m"
-         timestampString = "365431244.174049"
+         timestampString = "365441724.190568"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "62"
@@ -73,11 +47,24 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AZImagePickerViewController/AZImageCropController.m"
-         timestampString = "365431244.174049"
+         timestampString = "365441724.190568"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "53"
-         endingLineNumber = "53"
+         startingLineNumber = "101"
+         endingLineNumber = "101"
+         landmarkName = "-viewForZoomingInScrollView:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "AZImagePickerViewController/AZImageCropController.m"
+         timestampString = "365441724.190568"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "75"
+         endingLineNumber = "75"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -86,11 +73,24 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AZImagePickerViewController/AZImageCropController.m"
-         timestampString = "365431244.174049"
+         timestampString = "365441724.190568"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "55"
-         endingLineNumber = "55"
+         startingLineNumber = "66"
+         endingLineNumber = "66"
+         landmarkName = "-viewDidLoad"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "AZImagePickerViewController/AZImageCropController.m"
+         timestampString = "365441724.190568"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "68"
+         endingLineNumber = "68"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -138,11 +138,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AZImagePickerViewController/AZImageCropController.m"
-         timestampString = "365431244.174049"
+         timestampString = "365441724.190568"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "91"
-         endingLineNumber = "91"
+         startingLineNumber = "103"
+         endingLineNumber = "103"
          landmarkName = "-viewForZoomingInScrollView:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -151,11 +151,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AZImagePickerViewController/AZImageCropController.m"
-         timestampString = "365431244.174049"
+         timestampString = "365441724.190568"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "68"
-         endingLineNumber = "68"
+         startingLineNumber = "81"
+         endingLineNumber = "81"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -164,11 +164,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AZImagePickerViewController/AZImageCropController.m"
-         timestampString = "365440222.039255"
+         timestampString = "365441724.190568"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "147"
-         endingLineNumber = "147"
+         startingLineNumber = "158"
+         endingLineNumber = "158"
          landmarkName = "-actUse:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -177,11 +177,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AZImagePickerViewController/AZImageCropController.m"
-         timestampString = "365440222.039255"
+         timestampString = "365441724.190568"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "114"
-         endingLineNumber = "114"
+         startingLineNumber = "126"
+         endingLineNumber = "126"
          landmarkName = "-actUse:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -190,11 +190,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AZImagePickerViewController/AZImageCropController.m"
-         timestampString = "365440222.039255"
+         timestampString = "365441724.190568"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "116"
-         endingLineNumber = "116"
+         startingLineNumber = "128"
+         endingLineNumber = "128"
          landmarkName = "-actUse:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -203,11 +203,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AZImagePickerViewController/AZImageCropController.m"
-         timestampString = "365440222.039255"
+         timestampString = "365441724.190568"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "115"
-         endingLineNumber = "115"
+         startingLineNumber = "127"
+         endingLineNumber = "127"
          landmarkName = "-actUse:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -216,11 +216,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AZImagePickerViewController/AZImageCropController.m"
-         timestampString = "365440222.039255"
+         timestampString = "365441724.190568"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "138"
-         endingLineNumber = "138"
+         startingLineNumber = "146"
+         endingLineNumber = "146"
          landmarkName = "-actUse:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -229,33 +229,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AZImagePickerViewController/AZImageCropController.m"
-         timestampString = "365440222.039255"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "121"
-         endingLineNumber = "121"
-         landmarkName = "-actUse:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "AZImagePickerViewController/AZImageCropController.m"
-         timestampString = "365440222.039255"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "137"
-         endingLineNumber = "137"
-         landmarkName = "-actUse:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "AZImagePickerViewController/AZImageCropController.m"
-         timestampString = "365440222.039255"
+         timestampString = "365441724.190568"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "132"
@@ -268,7 +242,59 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AZImagePickerViewController/AZImageCropController.m"
-         timestampString = "365440222.039255"
+         timestampString = "365441724.190568"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "145"
+         endingLineNumber = "145"
+         landmarkName = "-actUse:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "AZImagePickerViewController/AZImageCropController.m"
+         timestampString = "365441724.190568"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "140"
+         endingLineNumber = "140"
+         landmarkName = "-actUse:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "AZImagePickerViewController/AZImageCropController.m"
+         timestampString = "365441724.190568"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "141"
+         endingLineNumber = "141"
+         landmarkName = "-actUse:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "AZImagePickerViewController/AZImageCropController.m"
+         timestampString = "365441724.190568"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "144"
+         endingLineNumber = "144"
+         landmarkName = "-actUse:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "AZImagePickerViewController/AZImageCropController.m"
+         timestampString = "365441724.190568"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "133"
@@ -281,11 +307,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AZImagePickerViewController/AZImageCropController.m"
-         timestampString = "365440222.039255"
+         timestampString = "365441724.190568"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "136"
-         endingLineNumber = "136"
+         startingLineNumber = "143"
+         endingLineNumber = "143"
          landmarkName = "-actUse:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -294,11 +320,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AZImagePickerViewController/AZImageCropController.m"
-         timestampString = "365440222.039255"
+         timestampString = "365441737.752422"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "125"
-         endingLineNumber = "125"
+         startingLineNumber = "156"
+         endingLineNumber = "156"
          landmarkName = "-actUse:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -307,11 +333,24 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AZImagePickerViewController/AZImageCropController.m"
-         timestampString = "365440222.039255"
+         timestampString = "365441739.89409"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "135"
-         endingLineNumber = "135"
+         startingLineNumber = "154"
+         endingLineNumber = "154"
+         landmarkName = "-actUse:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "AZImagePickerViewController/AZImageCropController.m"
+         timestampString = "365441799.587117"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "155"
+         endingLineNumber = "155"
          landmarkName = "-actUse:"
          landmarkType = "5">
       </FileBreakpoint>

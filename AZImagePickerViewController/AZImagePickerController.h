@@ -8,8 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+extern NSString* const AZImagePickerControllerResultingImage;
+
+@class AZImagePickerController;
+@protocol AZImagePickerControllerDelegate <NSObject>
+
+@required
+- (void) imagePickerController:(AZImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info;
+
+@end
+
 @interface AZImagePickerController : UINavigationController
 
 @property (nonatomic, retain, readonly) UIImagePickerController* imagePicker;
+@property (nonatomic, assign) id<AZImagePickerControllerDelegate> pickerDelegate;
+
 
 @end
