@@ -92,7 +92,7 @@
 	screenOffsetY -= self.imageView.frame.size.height / 2.;
 	[self.scroller setContentOffset:CGPointMake(-screenOffsetX, -screenOffsetY)];
 	
-	self.scroller.decelerationRate = 500;
+	self.scroller.decelerationRate = UIScrollViewDecelerationRateFast;
 }
 
 - (void)viewDidUnload
@@ -106,50 +106,6 @@
 - (UIView*) viewForZoomingInScrollView:(UIScrollView *)scrollView
 {
 	return self.imageView;
-}
-
-- (void) clampToMask:(NSTimeInterval) delay
-{
-	if ((self.imageView.frame.size.width > self.scroller.frame.size.width * (1 - maskedWidthFraction) &&
-		 self.imageView.frame.size.height > self.scroller.frame.size.height * (1 - maskedHeightFraction)))
-	{
-		double delayInSeconds = delay;
-		dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-		dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-			NSLog(@"~ clamping to masked area");
-			CGPoint newContentOffset = self.scroller.contentOffset;
-			
-			float maxX = self.scroller.frame.size.width * (1 - maskedWidthFraction / 2.);
-			maxX -= self.imageView.frame.size.width;
-			newContentOffset.x = MIN(-maxX, newContentOffset.x);
-			
-			float maxY = self.scroller.frame.size.height * (1 - maskedHeightFraction / 2.);
-			maxY -= self.imageView.frame.size.height;
-			newContentOffset.y = MIN(-maxY, newContentOffset.y);
-			
-			float minX = self.scroller.frame.size.width * (maskedWidthFraction / 2.);
-			newContentOffset.x = MAX(-minX, newContentOffset.x);
-			
-			float minY = self.scroller.frame.size.height * (maskedHeightFraction / 2.);
-			newContentOffset.y = MAX(-minY, newContentOffset.y);
-		
-			if (newContentOffset.x != self.scroller.contentOffset.x ||
-				newContentOffset.y != self.scroller.contentOffset.y)
-			{
-				[self.scroller setContentOffset:newContentOffset animated:YES];
-			}
-		});
-	}
-}
-
-- (void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView
-{
-	[self clampToMask:0.];
-}
-
-- (void) scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(float)scale
-{
-	[self clampToMask:0.];
 }
 
 #pragma mark Actions
