@@ -71,8 +71,6 @@
 	float insetWidth = originalWidth * (factor - 1.) / 2.;
 	float insetHeight = originalHeight * (factor - 1.) / 2.;
 	
-	[self.scroller setContentInset:UIEdgeInsetsMake(insetHeight, insetWidth, insetHeight, insetWidth)];
-	
 	//find smallest needed zoom value to fit all image
 	float zoomx = self.scroller.frame.size.width / originalWidth;
 	float zoomy = self.scroller.frame.size.height / originalHeight;
@@ -81,6 +79,11 @@
 	[self.scroller setMinimumZoomScale:minZoom];
 	[self.scroller setZoomScale:minZoom];
 	
+	insetHeight *= minZoom;
+	insetWidth *= minZoom;
+	
+	[self.scroller setContentInset:UIEdgeInsetsMake(insetHeight, insetWidth, insetHeight, insetWidth)];
+	
 	//reposition to center
 	float screenOffsetX = self.scroller.frame.size.width / 2.;
 	screenOffsetX -= self.imageView.frame.size.width / 2.;
@@ -88,6 +91,8 @@
 	float screenOffsetY = self.scroller.frame.size.height / 2.;
 	screenOffsetY -= self.imageView.frame.size.height / 2.;
 	[self.scroller setContentOffset:CGPointMake(-screenOffsetX, -screenOffsetY)];
+	
+	self.scroller.decelerationRate = 500;
 }
 
 - (void)viewDidUnload
@@ -103,10 +108,48 @@
 	return self.imageView;
 }
 
-- (void) scrollViewDidScroll:(UIScrollView *)scrollView
+- (void) clampToMask:(NSTimeInterval) delay
 {
-	NSLog(@"%@", NSStringFromCGPoint(self.scroller.contentOffset));
-	NSLog(@"%@", NSStringFromCGRect(self.imageView.frame));
+	if ((self.imageView.frame.size.width > self.scroller.frame.size.width * (1 - maskedWidthFraction) &&
+		 self.imageView.frame.size.height > self.scroller.frame.size.height * (1 - maskedHeightFraction)))
+	{
+		double delayInSeconds = delay;
+		dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+		dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+			NSLog(@"~ clamping to masked area");
+			CGPoint newContentOffset = self.scroller.contentOffset;
+			
+			float maxX = self.scroller.frame.size.width * (1 - maskedWidthFraction / 2.);
+			maxX -= self.imageView.frame.size.width;
+			newContentOffset.x = MIN(-maxX, newContentOffset.x);
+			
+			float maxY = self.scroller.frame.size.height * (1 - maskedHeightFraction / 2.);
+			maxY -= self.imageView.frame.size.height;
+			newContentOffset.y = MIN(-maxY, newContentOffset.y);
+			
+			float minX = self.scroller.frame.size.width * (maskedWidthFraction / 2.);
+			newContentOffset.x = MAX(-minX, newContentOffset.x);
+			
+			float minY = self.scroller.frame.size.height * (maskedHeightFraction / 2.);
+			newContentOffset.y = MAX(-minY, newContentOffset.y);
+		
+			if (newContentOffset.x != self.scroller.contentOffset.x ||
+				newContentOffset.y != self.scroller.contentOffset.y)
+			{
+				[self.scroller setContentOffset:newContentOffset animated:YES];
+			}
+		});
+	}
+}
+
+- (void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+	[self clampToMask:0.];
+}
+
+- (void) scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(float)scale
+{
+	[self clampToMask:0.];
 }
 
 #pragma mark Actions
@@ -143,6 +186,16 @@
     CGPoint bufferOffset = screenOffset;
 	CGContextTranslateCTM(ctx, -bufferOffset.x, bufferOffset.y);
 
+	float angle = 180.0;
+	if (self.originalImage.imageOrientation == UIImageOrientationRight)
+		angle = 90.;
+	else if (self.originalImage.imageOrientation == UIImageOrientationLeft)
+		angle = -90.;
+	else if (self.originalImage.imageOrientation == UIImageOrientationUp)
+		angle = 0.;
+	
+	self.originalImage = [self image:self.originalImage rotatedByDegrees:angle];
+
 	CGContextDrawImage(ctx,
 					   self.imageView.frame,
 					   self.originalImage.CGImage);
@@ -155,6 +208,40 @@
 	{
 		[self.delegate imageCropController:self didFinisedCroppingResultingInImage:img];
 	}
+}
+
+#pragma mark Image utilities
+
+CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
+CGFloat RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
+
+- (UIImage *)image:(UIImage*) image rotatedByDegrees:(CGFloat)degrees
+{
+	// calculate the size of the rotated view's containing box for our drawing space
+	UIView *rotatedViewBox = [[UIView alloc] initWithFrame:CGRectMake(0, 0, image.size.width, image.size.height)];
+	CGAffineTransform t = CGAffineTransformMakeRotation(DegreesToRadians(degrees));
+	rotatedViewBox.transform = t;
+	CGSize rotatedSize = rotatedViewBox.frame.size;
+	[rotatedViewBox release];
+	
+	// Create the bitmap context
+	UIGraphicsBeginImageContext(rotatedSize);
+	CGContextRef bitmap = UIGraphicsGetCurrentContext();
+	
+	// Move the origin to the middle of the image so we will rotate and scale around the center.
+	CGContextTranslateCTM(bitmap, rotatedSize.width/2, rotatedSize.height/2);
+	
+	//   // Rotate the image context
+	CGContextRotateCTM(bitmap, DegreesToRadians(degrees));
+	
+	// Now, draw the rotated/scaled image into the context
+	CGContextScaleCTM(bitmap, 1.0, -1.0);
+	CGContextDrawImage(bitmap, CGRectMake(-image.size.width / 2, -image.size.height / 2, image.size.width, image.size.height), [image CGImage]);
+	
+	UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	return newImage;
+	
 }
 
 @end
