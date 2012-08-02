@@ -124,7 +124,7 @@
 	
 	CGSize size = CGSizeMake(self.scroller.bounds.size.width - dx, self.scroller.bounds.size.height - dy);
 	
-	UIGraphicsBeginImageContext(size);
+	UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
 	CGContextRef ctx = UIGraphicsGetCurrentContext();
 	
 	CGContextTranslateCTM(ctx, 0, size.height);
