@@ -115,20 +115,47 @@
 	[self.navigationController popViewControllerAnimated:YES];
 }
 
+#define clamp(x) (x > 0. ? x : 0.)
+
 - (IBAction)actUse:(id)sender
 {
 	float dx = self.scroller.bounds.size.width * maskedWidthFraction;
 	float dy = self.scroller.bounds.size.height * maskedHeightFraction;
 	
+	float sizeX = 0., sizeY = 0.;
+	//find image or mask size
+	//right
+	float maskX = self.scroller.bounds.size.width - dx / 2;
+	float imageX = self.imageView.frame.size.width - self.scroller.contentOffset.x;
+	sizeX = maskX > imageX ? imageX : maskX;
+	sizeX -= dx / 2;
+	//bottom
+	float maskY = self.scroller.bounds.size.height - dy / 2;
+	float imageY = self.imageView.frame.size.height - self.scroller.contentOffset.y;
+	sizeY = maskY > imageY ? imageY : maskY;
+	sizeY -= dy / 2;
+	//left
+	float maskLeft = dx / 2;
+	float imageLeft = -self.scroller.contentOffset.x;
+	float leftOff = imageLeft > maskLeft ? imageLeft - maskLeft : 0.;
+	//up
+	float maskUp = dy / 2;
+	float imageUp = -self.scroller.contentOffset.y;
+	float upOff = imageUp > maskUp ? imageUp - maskUp : 0.;
+	
 	float windowY = self.scroller.bounds.size.height - dy;
 	
-	CGSize size = CGSizeMake(self.scroller.bounds.size.width - dx, self.scroller.bounds.size.height - dy);
+	CGSize size = CGSizeMake(floorf(sizeX - leftOff), floorf(sizeY - upOff));
 	
 	//force scale to 2.
 	UIGraphicsBeginImageContextWithOptions(size, NO, 2.);
 	CGContextRef ctx = UIGraphicsGetCurrentContext();
 	
-	CGContextTranslateCTM(ctx, 0, size.height);
+	CGContextSetFillColorWithColor(ctx, [UIColor redColor].CGColor);
+	CGContextFillRect(ctx, CGRectMake(0, 0, size.width, size.height));
+	
+	CGContextTranslateCTM(ctx, -leftOff, size.height + upOff + clamp(maskY - imageY) - clamp(imageUp - maskUp));
+	
 	CGContextScaleCTM(ctx, 1, -1);
 	CGPoint screenOffset = self.scroller.contentOffset;
 	
