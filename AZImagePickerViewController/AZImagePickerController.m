@@ -75,6 +75,11 @@ NSString* const AZImagePickerControllerResultingImage = @"AZImagePickerControlle
 	[self pushViewController:cropper animated:YES];
 }
 
+- (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+	[self dismissModalViewControllerAnimated:YES];
+}
+
 #pragma mark ImageCropperControllerDelegate
 
 - (void) imageCropController:(AZImageCropController *)cropper didFinisedCroppingResultingInImage:(UIImage *)image
