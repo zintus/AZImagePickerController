@@ -77,8 +77,10 @@ NSString* const AZImagePickerControllerResultingImage = @"AZImagePickerControlle
 
 - (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
-	if (self.viewControllers.count == 1)
+	if (self.imagePicker.viewControllers.count == 1)
 		[self dismissModalViewControllerAnimated:YES];
+	else
+		[self.imagePicker popViewControllerAnimated:YES];
 }
 
 #pragma mark ImageCropperControllerDelegate
